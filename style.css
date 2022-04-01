@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&family=Ingrid+Darling&family=Lato:wght@100&display=swap");
+body {
+  background: #0c002b;
+  font-family: "Alumni Sans Inline One", cursive;
+  font-family: "Ingrid Darling", cursive;
+  font-family: "Lato", sans-serif;
+  height: 100vh;
+}
+
+a.btn {
+  padding: 8px 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  color: #1670f0;
+}
+
+a.btn::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  background: rgba(255, 255, 255, 0.05);
+  width: 50%;
+}
+
+a.btn span:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #0c002b, #1779ff);
+  animation: animate_1 2s linear infinite;
+}
+
+@keyframes animate_1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+a.btn span:nth-child(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, #0c002b, #1779ff);
+  animation: animate_2 2s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes animate_2 {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+a.btn span:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to left, #0c002b, #1779ff);
+  animation: animate_3 2s linear infinite;
+  animation-delay: 2s;
+}
+
+@keyframes animate_3 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+a.btn span:nth-child(4) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to top, #0c002b, #1779ff);
+  animation: animate_4 2s linear infinite;
+  animation-delay: 3s;
+}
+
+@keyframes animate_4 {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+h1#city {
+  font-size: 2rem;
+  font-weight: 1000;
+}
+.text-center.py-3 {
+  border: 2px solid;
+  background: #08260ccc;
+
+  border-radius: 20px;
+}
+.text-center.p-1 {
+  border: 2px solid;
+  background: #08260ccc;
+
+  border-radius: 20px;
+}
+.bootm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* responstive */
+@media only screen and (max-width: 766px) {
+  .col-md-3.col-sm-12 {
+    padding: 1rem;
+  }
+  .text-center.p-1 {
+    width: 358px;
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .col-md-3.col-sm-12 {
+    padding: 1rem;
+  }
+  .text-center.p-1 {
+    width: 280px;
+  }
+}
+@media only screen and (max-width: 310px) {
+  .col-md-3.col-sm-12 {
+    padding: 1rem;
+  }
+  .text-center.p-1 {
+    width: 200px;
+  }
+}
